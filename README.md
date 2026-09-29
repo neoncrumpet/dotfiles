@@ -101,16 +101,14 @@ export PATH
 
 ### Sensible OS X defaults
 
-Mathias's repo is the canonical for this, but you should probably run his or mine after reviewing it.
-
 ```bash
 ./.osx
 ```
 
 ### `~/bin`
 
-One-off binaries that aren't via an npm global or homebrew. [git open](https://github.com/paulirish/git-open), [wifi-password](https://github.com/rauchg/wifi-password), [coloredlogcat](https://developer.sinnerschrader-mobile.com/colored-logcat-reloaded/507/), [git-overwritten](https://github.com/mislav/dotfiles/blob/master/bin/git-overwritten), and `subl` for Sublime Text.
+One-off binaries that aren't via an npm global or homebrew. 
+[wifi-password](https://github.com/rauchg/wifi-password), 
+[coloredlogcat](https://developer.sinnerschrader-mobile.com/colored-logcat-reloaded/507/),
 
 ### Syntax highlighting for these files
-
-If you edit this stuff, install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Package Control](http://wbond.net/sublime_packages/package_control)

@@ -3,10 +3,6 @@
 
 brew install --cask imagealpha
 brew install --cask imageoptim
-#brew install --cask android-file-transfer
-#brew install --cask android-platform-tools
-#brew install --cask android-sdk
-#brew install --cask android-studio
 
 brew install --cask slack
 brew install --cask microsoft-teams
@@ -17,7 +13,6 @@ brew install --cask notion
 brew install --cask brave-browser
 brew install --cask firefox
 brew install --cask torbrowser
-#brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 
 # less often
 brew install --cask vlc
