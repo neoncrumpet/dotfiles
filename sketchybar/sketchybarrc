@@ -31,10 +31,8 @@ sketchybar --add event aerospace_workspace_change \
 sketchybar --add item logo left --set logo script="$PLUGIN_DIR/logo.sh" background.border_width=0 background.height=20 icon=$ICON_APPLE click_script="./bin/menus -s 0" --subscribe logo mouse.clicked window_focus front_app_switched space_change title_change
 sketchybar --add bracket apple logo --set apple background.color=$COLOR_BACKGROUND background.border_color=$COLOR_DEFAULT
 sketchybar --add item seperator.r0 left --set seperator.r0 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
-sketchybar --add item title left --set title script="$PLUGIN_DIR/title.sh" padding_left=2 padding_right=8 background.border_width=0 background.height=24 click_script="./bin/menus -s 1" --subscribe title window_focus front_app_switched space_change title_change
-sketchybar --add bracket window title --set window background.color=$COLOR_BACKGROUND background.border_color=$COLOR_DEFAULT
-sketchybar --add item seperator.r1 left --set seperator.r1 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
 
+# Spaces
 COLORS_SPACE=($COLOR_RED_BRIGHT $COLOR_GREEN_BRIGHT $COLOR_YELLOW_BRIGHT $COLOR_BLUE_BRIGHT $COLOR_MAGENTA_BRIGHT)
 LENGTH=${#ICONS_SPACE[@]}
 for i in "${!ICONS_SPACE[@]}"
@@ -58,6 +56,10 @@ do
 done
 
 sketchybar --add bracket spaces '/space\..*/' --set spaces background.color=$COLOR_BACKGROUND
+
+sketchybar --add item seperator.r1 left --set seperator.r1 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
+sketchybar --add item title left --set title script="$PLUGIN_DIR/title.sh" padding_left=2 padding_right=8 background.border_width=0 background.height=24 click_script="./bin/menus -s 1" --subscribe title window_focus front_app_switched space_change title_change
+sketchybar --animate linear 20 --add bracket window title --set window background.color=$COLOR_BACKGROUND background.border_color=$COLOR_DEFAULT
 
 sketchybar --add item centre right --set centre icon.color=$COLOR_DEFAULT background.color=$COLOR_BACKGROUND icon=$ICON_CMD padding_left=6 padding_right=4 icon.padding_left=8 icon.padding_right=0 background.border_width=0 background.corner_radius=6 background.height=24 click_script="osascript -e 'tell application \"System Events\" to click menu bar item 2 of menu bar 1 of application process \"ControlCenter\"'" \
            --add bracket control centre --set control background.color=$COLOR_BACKGROUND background.border_color=$COLOR_DEFAULT \

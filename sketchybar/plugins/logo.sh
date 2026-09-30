@@ -6,7 +6,7 @@ source "$CONFIG_DIR/icons.sh"
 LABEL=$(aerospace list-windows --focused --json | jq -r '.[0]."app-name"')
 
 case "$LABEL" in
-  "Ghostty") RESULT="👻";;
+  "Ghostty") RESULT=$ICON_TERM;;
   "Finder") RESULT=$ICON_FILE ;;
   "Weather") RESULT=$ICON_WEATHER ;;
   "Clock") RESULT=$ICON_CLOCK ;;

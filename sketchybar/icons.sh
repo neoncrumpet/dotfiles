@@ -1,9 +1,6 @@
 #!/usr/bin/env sh
 
 # Uses SF Symbols.
-#!/bin/sh
-
-# Material Design Icons
 
 export ICON_CONNECT=󰴽
 export ICON_PROCESS=󱓟
@@ -21,7 +18,7 @@ export ICONS_SPACE=(󰬺 󰬻 󰬼 󰬽 󰬾)
 export ICONS_SPACE_CIRCLE=(􁐉 􁐉 􁐉 􁐉 􁐉 􁐉 􁐉 􁐉 􁐉)
 
 export ICON_APP=󰣆 # fallback app
-export ICON_TERM=👻 # fallback terminal app, terminal, warp, iterm2
+export ICON_TERM=󰆍 # fallback terminal app, terminal, warp, iterm2
 export ICON_PACKAGE=󰏓 # brew
 export ICON_DEV=󰨞 # nvim, neovide, xcode, vscode, intellij
 export ICON_FILE=󰀶 # ranger, finder
