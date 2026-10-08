@@ -10,7 +10,7 @@ config-version = 2
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
     'exec-and-forget /opt/homebrew/bin/sketchybar --config ~/.config/sketchybar/sketchybarrc',
-    'exec-and-forget ~/.config/sketchybar/bin/bottombar --config ~/.config/sketchybar/bottombar/sketchybarrc'
+    'exec-and-forget borders active_color=0xfff3ffff inactive_color=0xff494d64 width=5'
 ]
 exec-on-workspace-change = ['/bin/bash', '-c', '/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change']
 
@@ -78,8 +78,8 @@ key-mapping.preset = 'qwerty'
 gaps.inner.horizontal = 16
 gaps.inner.vertical =   16
 gaps.outer.left =       16
-gaps.outer.bottom =     60
-gaps.outer.top =        16
+gaps.outer.bottom =     24
+gaps.outer.top =        24
 gaps.outer.right =      16
 
 # 'main' binding mode declaration
@@ -88,30 +88,6 @@ gaps.outer.right =      16
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
 
-    # All possible keys:
-    # - Letters.        a, b, c, ..., z
-    # - Numbers.        0, 1, 2, ..., 9
-    # - Keypad numbers. keypad0, keypad1, keypad2, ..., keypad9
-    # - F-keys.         f1, f2, ..., f20
-    # - Special keys.   minus, equal, period, comma, slash, backslash, quote, semicolon,
-    #                   backtick, leftSquareBracket, rightSquareBracket, space, enter, esc,
-    #                   backspace, tab, pageUp, pageDown, home, end, forwardDelete,
-    #                   sectionSign (ISO keyboards only, european keyboards only)
-    # - Keypad special. keypadClear, keypadDecimalMark, keypadDivide, keypadEnter, keypadEqual,
-    #                   keypadMinus, keypadMultiply, keypadPlus
-    # - Arrows.         left, down, up, right
-
-    # All possible modifiers: cmd, alt, ctrl, shift
-
-    # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
-
-    # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-    # You can uncomment the following lines to open up terminal with alt + enter shortcut
-    # (like in i3)
-    # alt-enter = '''exec-and-forget osascript -e \
-    # 'tell application "Terminal" to tell (do script) to activate' '''
-
-    # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
 
@@ -134,7 +110,7 @@ gaps.outer.right =      16
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
-    ctrl-alt-3 = 'workspace 3'
+    alt-0 = 'workspace 3'
     alt-4 = 'workspace 4'
     alt-5 = 'workspace 5'
 
@@ -144,6 +120,10 @@ gaps.outer.right =      16
     alt-shift-3 = 'move-node-to-workspace 3'
     alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-5 = 'move-node-to-workspace 5'
+
+    # next and previous space
+    alt-n = 'workspace next --wrap-around'
+    alt-p = 'workspace prev --wrap-around'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'

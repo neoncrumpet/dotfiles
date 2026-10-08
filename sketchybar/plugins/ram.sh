@@ -33,8 +33,7 @@ case $MEMORY in
 	;;
 esac
 
-"$HOME/.config/sketchybar/bin/bottombar" --set $NAME icon=$ICON \
-	icon.color=$COLOR \
-	background.color=$BCOLOR \
+sketchybar --set $NAME icon=$ICON \
+	icon.color=$COLOR_SYSTEM \
 	label=" $MEMORY% " \
-	label.color=$COLOR
+	label.color=$COLOR_SYSTEM

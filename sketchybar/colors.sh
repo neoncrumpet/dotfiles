@@ -8,7 +8,7 @@ export COLOR_ACCENT=0xe0d65d0e
 export COLOR_ACCENT_BRIGHT=0xe0fe8019
 
 export COLOR_BLACK=0xe04c4f69
-export COLOR_RED=0xe0d20f39
+export COLOR_RED=0xe0d20f39 
 export COLOR_GREEN=0xe040a02b
 export COLOR_YELLOW=0xe0df8e1d
 export COLOR_ORANGE=0xe0fe640b
@@ -16,6 +16,22 @@ export COLOR_BLUE=0xe01e66f5
 export COLOR_MAGENTA=0xe08839ef
 export COLOR_CYAN=0xe004a5e5
 export COLOR_WHITE=0xe0dce0e8
+
+# light blue
+export COLOR_CLARITY=0xfff3ffff
+# blue
+export COLOR_PROTOCOL=0xffafcbd6
+# beige
+export COLOR_MEMBRANE=0xffbeb780
+# blue
+export COLOR_SYSTEM=0xff79a6b9
+#dark blue
+export COLOR_SECTOR=0xff20464f
+# Black
+export COLOR_ARCHIVE=0xff0e1a26
+# transparent
+export TRANSPARENT=0x0000000
+
 
 export COLOR_BLACK_BRIGHT=0xe011111b
 export COLOR_RED_BRIGHT=0xe0f38ba8

@@ -4,14 +4,12 @@
 brew install --cask imagealpha
 brew install --cask imageoptim
 
-brew install --cask slack
-brew install --cask microsoft-teams
 brew install --cask visual-studio-code
-brew install --cask notion
 
 # browsers
 brew install --cask brave-browser
 brew install --cask firefox
+
 brew install --cask torbrowser
 
 # less often
