@@ -84,5 +84,5 @@ fi
 # updated with the current battery status
 sketchybar --set $NAME icon=$ICON\
 	icon.color=$COLOR_SYSTEM \
-	label=" ${BATT_PERCENT}󰏰" \
+	label=" ${BATT_PERCENT}" \
 	label.color=$COLOR_SYSTEM

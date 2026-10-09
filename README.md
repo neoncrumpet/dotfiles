@@ -20,6 +20,25 @@ FFMpeg gets its own function file.
 - commit/push changes you want.
 - you can also hypothetically cherry-pick commits from me and mathias and our fork ecosystem.
 
+### SketchyBar Bluetooth status
+
+The Bluetooth item sits beside Wi-Fi in the status bracket, using `ICON_BT`
+from `sketchybar/icons.sh`. It lists all connected paired devices, separated by
+commas, or shows `Disconnected` when none are connected (including Bluetooth
+being off). Devices without a name use their Bluetooth address. A failed query
+shows `Unavailable` and logs an error instead of appearing disconnected.
+
+It queries macOS's native IOBluetooth framework through `osascript` every
+15 seconds and on wake, without extra dependencies or `system_profiler`.
+Only devices exposed by that framework are included; some Bluetooth LE
+peripherals may not appear.
+
+To apply changes from an isolated checkout, copy `sketchybar/sketchybarrc`,
+`sketchybar/icons.sh`, and `sketchybar/plugins/bluetooth.sh` into the corresponding
+paths in your active SketchyBar configuration (usually `~/.config/sketchybar`).
+Preserve any local changes, ensure `plugins/bluetooth.sh` is executable with
+`chmod +x`, then run `sketchybar --reload` when ready.
+
 ### The "readline config" (`.inputrc`)
 
 Basically it makes typing into the prompt amazing.

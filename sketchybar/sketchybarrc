@@ -63,15 +63,6 @@ sketchybar --add bracket spaces '/space\..*/' --set spaces background.color=$TRA
 
 sketchybar --add item seperator.r1 left --set seperator.r1 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
 
-# sketchybar --add item title left \
-#            --set title script="$PLUGIN_DIR/title.sh" \
-#            padding_left=2 padding_right=0 \
-#            background.border_color=$COLOR_SYSTEM \
-#            click_script="./bin/menus -s 1" \
-#            label.width=100 \
-#            label.align=center \
-#            --subscribe title window_focus front_app_switched space_change title_change
-
 sketchybar --add bracket titlebar title --set titlebar background.color=0x000000 background.border_width=2
 
 #
@@ -94,6 +85,10 @@ sketchybar --add item time right \
                  padding_left=2 padding_right=8 \
                  background.height=24 \
                  icon="󰹻" \
+                 icon.padding_left=10 \
+                 icon.padding_right=8 \
+                 icon.font.size=20 \
+                 label.padding_right=6 \
            --add bracket clock time date --set clock background.color=$TRANSPARENT background.border_color=$COLOR_SYSTEM background.border_width=2 \
            --add item seperator.r4 right --set seperator.r4 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
 
@@ -102,13 +97,36 @@ sketchybar --add item wifi right \
            update_freq=5 \
            padding_left=2 \
            padding_right=10 \
-           background.border_width=0 \
+           label.padding_left=6 \
+           label.font.size=10 \
            label.highlight=on \
            click_script="osascript -e 'tell application \"System Events\" to click menu bar item 3 of menu bar 1 of application process \"ControlCenter\"'" \
            --subscribe wifi wifi_change \
-           --add item volume right --set volume script="$PLUGIN_DIR/volume.sh" padding_left=4 padding_right=4 background.border_width=0 background.corner_radius=3 background.height=16 click_script="osascript -e 'tell application \"System Events\" to click menu bar item 4 of menu bar 1 of application process \"ControlCenter\"'" --subscribe volume volume_change \
-           --add item battery right --set battery script="$PLUGIN_DIR/battery.sh" update_freq=120 padding_left=8 padding_right=2 background.height=16 click_script="osascript -e 'tell application \"System Events\" to click menu bar item 5 of menu bar 1 of application process \"ControlCenter\"'" --subscribe battery system_woke power_source_change \
-           --add bracket status wifi volume battery --set status background.color=$TRANSPARENT background.border_color=$COLOR_SYSTEM background.border_width=2\
+           --add item bluetooth right \
+           --set bluetooth script="$PLUGIN_DIR/bluetooth.sh" \
+           update_freq=15 \
+           padding_right=10 \
+           label.padding_left=2 \
+           label.font.size=10 \
+           background.border_width=0 \
+           icon="$ICON_BT" \
+           label.highlight=on \
+           --subscribe bluetooth system_woke \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+                 label.font.size=10 \
+                 label.padding_right=10 \
+                 click_script="osascript -e 'tell application \"System Events\" to click menu bar item 4 of menu bar 1 of application process \"ControlCenter\"'" \
+           --subscribe volume volume_change \
+           --add item battery right \
+           --set battery script="$PLUGIN_DIR/battery.sh" \
+                 label.padding_right=10 \
+                 update_freq=120 padding_right=2 \
+                 label.font.size=10 \
+                 background.height=16 \
+                 click_script="osascript -e 'tell application \"System Events\" to click menu bar item 5 of menu bar 1 of application process \"ControlCenter\"'" \
+            --subscribe battery system_woke power_source_change \
+           --add bracket status wifi bluetooth volume battery --set status background.color=$TRANSPARENT background.border_color=$COLOR_SYSTEM background.border_width=2\
            --add item seperator.r5 right --set seperator.r5 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
 
 sketchybar --add item ram right                      \
@@ -116,22 +134,28 @@ sketchybar --add item ram right                      \
                 update_freq=5                        \
                 padding_left=0                       \
                 padding_right=0                     \
+                label.padding_right=24 \
+                label.font.size=10 \
                 background.border_width=0            \
            --add item cpu right                      \
            --set cpu script="$PLUGIN_DIR/cpu.sh"     \
                  update_freq=5                       \
+                 label.padding_right=24 \
+                 label.font.size=10 \
                  padding_left=0                      \
                  padding_right=0                     \
                  background.border_width=0           \
            --add item disk right                     \
            --set disk script="$PLUGIN_DIR/disk.sh"   \
                  label.padding_left=0                \
+                 label.padding_right=24 \
                  icon.padding_right=0 \
                  icon.padding_left=0 \
                  update_freq=5 \
                  padding_left=10 \
                  padding_right=0 \
                  background.border_width=0 \
+                 label.font.size=10 \
            --add bracket activity ram cpu disk \
            --set activity background.color=$TRANSPARENT \
                  background.border_color=$COLOR_SYSTEM \

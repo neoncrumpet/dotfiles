@@ -1,4 +1,4 @@
-export ZSH=/Users/deepfried/.oh-my-zsh
+export ZSH=/Users/s/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 

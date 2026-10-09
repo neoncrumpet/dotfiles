@@ -64,8 +64,8 @@
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 
-[url "git@github.com:d33pfri3d"]
-  insteadOf = "git://github.com/d33pfri3d/"
+[url "git@github.com:neoncrumpet"]
+  insteadOf = "git://github.com/neoncrumpet/"
 [help]
 	autocorrect = 1
 
@@ -80,7 +80,7 @@
   path = ~/.gitconfig.local
 [user]
 	name = Shaun D
-	email = shaun@deepfriedlabs.com
+	email = shaun@neoncrumpet.com
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f

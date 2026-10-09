@@ -62,6 +62,7 @@ export ICON_HOTSPOT=􀉤
 export ICON_WIFI=􀙇
 export ICON_WIFI_OFF=􀙈
 export ICON_VPN=󰒘 # vpn, nordvpn
+export ICON_BT=󰂰
 
 export ICONS_VOLUME=(􀊡 􀊥 􀊧 􀊩)
 export ICONS_MICROPHONE=(􀊲 􀊰 􀊱)
