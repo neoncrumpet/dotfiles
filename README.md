@@ -1,8 +1,5 @@
-# Shaun's dotfiles
+# One configuration to rule them all. One to find them, One configuration to bring them all and in the darkness bind them. 
 
-## Changelog
-
-FFMpeg gets its own function file.
 
 ## Setup
 
