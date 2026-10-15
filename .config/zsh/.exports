@@ -1,0 +1,37 @@
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+
+export EDITOR="code --wait"
+
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/"
+export PATH="/.local/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
+export PSQL_DIR=/usr/local/pgsql/bin/
+export PATH="$PSQL_DIR:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# JAVA version
+# export JAVA_HOME="/usr/libexect/java_home -v 11.0.11"
+# export JAVA_HOME="$HOME/usr/libexect/java_home -v 1.8.0_292"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="/Users/deepfried/.local/share/solana/install/active_release/bin:$PATH"
+
+export GPG_TTY=$(tty)
+
