@@ -75,5 +75,10 @@ brew install zsh
 brew install pnpm
 brew install asdf
 
+# nvim things
+
+brew install typescript
+brew install lua-language-server
+
 # Remove outdated versions from the cellar
 brew cleanup
